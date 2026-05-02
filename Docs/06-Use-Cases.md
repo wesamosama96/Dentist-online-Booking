@@ -73,3 +73,5 @@ Steps:
 1. Admin logs in
 2. Views all users
 3. Adds or deletes users
+
+[← Back to Documentation Index](./README.md)

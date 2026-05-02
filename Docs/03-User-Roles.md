@@ -3,16 +3,19 @@
 ## Patient
 - Register/Login
 - Book appointments 
-- Requst appointment rescheduling
+- Requst appointment rescheduling or Cancelling
 - View appointment history
 
 ## Dentist
 - Login
 - View daily schedule
 - Update appointment status
-- Add treatment notes
+- Add treatment notes (Future Phase)
 
 ## Admin
 - Manage users
 - Manage appointments
-- View system reports
+- View overall clinic activity
+- Update or remove records when needed
+
+[← Back to Documentation Index](./README.md)

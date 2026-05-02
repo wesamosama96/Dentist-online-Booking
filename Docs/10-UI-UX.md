@@ -1,4 +1,4 @@
-# UI/UX Summary
+<h1 style="font-size: 3rem; color: white; text; text-transform: uppercase">Ui - UX Summary</h1>
 
 ## Screens
 
@@ -6,6 +6,11 @@
 - Registration Page
 - Appointment Booking Page
 - Dashboard
+- Patient Portal
+- Paitent History
+- Gallery
+- Contact Us
+- Services
 
 ## Notes
 
@@ -57,3 +62,6 @@ UI/UX designs are prepared and will guide frontend implementation.
     <p style="font-size:1.5rem;font-weight:bold;color:white;">Gallery</p>
     <img src="./Ui-Ux/clinic_gallery/screen.png" style="width: 85%">
 </div>
+
+
+[← Back to Documentation Index](./README.md)
