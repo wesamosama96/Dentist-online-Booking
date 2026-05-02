@@ -28,7 +28,7 @@ Phase 1 documentation can be found in the `/docs` folder.
 
 ### Documentation Index
 
-- [Open Project Documentation](./docs/README.md)
+- [Open Project Documentation](./Docs/README.md)
 
 ---
 
