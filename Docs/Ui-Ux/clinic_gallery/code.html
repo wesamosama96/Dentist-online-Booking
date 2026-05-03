@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | Aether Dental Clinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#444651",
+                    "primary-fixed": "#dce1ff",
+                    "on-secondary-fixed-variant": "#005047",
+                    "primary-container": "#1e3a8a",
+                    "on-primary-container": "#90a8ff",
+                    "secondary-container": "#62fae3",
+                    "secondary": "#006b5f",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#ff8897",
+                    "tertiary-fixed": "#ffdadc",
+                    "on-primary-fixed-variant": "#264191",
+                    "outline-variant": "#c5c5d3",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#4059aa",
+                    "tertiary-container": "#7f112d",
+                    "inverse-surface": "#2d3133",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#400010",
+                    "surface-bright": "#f7f9fb",
+                    "background": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary-fixed-dim": "#ffb2b9",
+                    "inverse-primary": "#b6c4ff",
+                    "on-background": "#191c1e",
+                    "secondary-fixed-dim": "#3cddc7",
+                    "primary": "#00236f",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "on-secondary": "#ffffff",
+                    "outline": "#757682",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#00201c",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#00164e",
+                    "surface-container": "#eceef0",
+                    "on-surface": "#191c1e",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary": "#5b001a",
+                    "secondary-fixed": "#62fae3",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-secondary-container": "#007165",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-tertiary-fixed-variant": "#891933"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "gutter": "24px",
+                    "xl": "80px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "h2": ["Newsreader"],
+                    "label-bold": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Newsreader"],
+                    "h3": ["Newsreader"],
+                    "body-md": ["Inter"],
+                    "caption": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "h3": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 24px;
+        }
+        .item-lg { grid-row: span 3; }
+        .item-md { grid-row: span 2; }
+        .item-sm { grid-row: span 1; }
+        
+        .gallery-overlay {
+            background: linear-gradient(to top, rgba(0, 35, 111, 0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="bg-white/80 backdrop-blur-md dark:bg-slate-950/80 font-serif font-medium tracking-tight Newsreader border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm dark:shadow-none docked full-width top sticky z-50">
+<div class="flex justify-between items-center w-full px-6 md:px-12 py-4 max-w-full">
+<div class="text-xl font-bold text-blue-900 dark:text-white">Aether Dental</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Services</a>
+<a class="text-blue-900 dark:text-white border-b-2 border-blue-900 dark:border-blue-400 pb-1 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Gallery</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Contact</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Patient Portal</a>
+</div>
+<button class="bg-[#FF7F50] text-white px-6 py-2.5 rounded-full font-label-bold text-label-bold hover:scale-[1.02] active:scale-95 duration-200 transition-transform shadow-md">
+                Book Now
+            </button>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 md:px-12 py-xl">
+<!-- Header Section -->
+<header class="mb-lg text-center lg:text-left">
+<h1 class="font-h1 text-h1 text-primary mb-xs">A Glimpse into Aether Dental</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Discover our state-of-the-art facilities designed for your comfort and premium dental care experience.</p>
+</header>
+<!-- Gallery Grid -->
+<div class="masonry-grid">
+<!-- Large Item: High Tech Equipment -->
+<div class="gallery-card relative overflow-hidden rounded-xl shadow-lg item-lg">
+<img alt="Advanced Dental Technology" class="w-full h-full object-cover transition-transform duration-500" data-alt="Modern high-tech dental operatory with digital scanners and sleek ergonomic chairs in a bright minimalist clinical environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6orUgvy4KZcv5Zr_pXpZgoueYHmdfeUG9mGGhG-qEiUV2gE1bRJ4lsb6XOgy9XTUvxsHcKCoYIlj5gdLzjv4dgAdcR5zqjpnev7h4nfIz9jxAXrxVeC4_qEdhAme1v-DgL51Id0V_UFrY4e10y-KcW6NIMa0bRqc2_gO7Ga-HE0k1r4MSS1Cu7P02y_E1ucWtuiVV5scVZ93ItjSbJud48ftG1EpuKfZ1wOvqGp5qamJpp5hNd_KzXwGAod4ogA8a_fhC48rps3k"/>
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-md text-white">
+<span class="font-label-bold text-label-bold uppercase tracking-wider mb-xs opacity-80">Technology</span>
+<h3 class="font-h3 text-h3">Precision Diagnostics</h3>
+</div>
+</div>
+<!-- Medium Item: Patient Room -->
+<div class="gallery-card relative overflow-hidden rounded-xl shadow-lg item-md">
+<img alt="Luxury Patient Suite" class="w-full h-full object-cover transition-transform duration-500" data-alt="A clean airy dental patient room with large windows overlooking trees featuring soft blue accents and modern medical equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0zE9pl8LxR6-Vxli-0Gg5bVVnx8MELeKTgD3NNY7f5Of8pgBbB-2rLv42hlG_wvjZHeE1eflEFxyZyNHWxDf0jPMNVQbBy0ujM0ZMdYaUJzyWuSOgvuTlh4Lp0H8HFU1qmSZhLPLYrCCe8uDSEH94fbv1n07Jn3Mra_uKLcMVlwN4hlceKZp50tSHHpfhJqwaa_aWOKRfgoa4iWQUfc9CGEtMeS0Wc57M1jVP1o9EwZSbwq5GGqtIWgz4oXsYqVI4OzE5zib-xIo"/>
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-md text-white">
+<span class="font-label-bold text-label-bold uppercase tracking-wider mb-xs opacity-80">Patient Comfort</span>
+<h3 class="font-h3 text-h3 text-xl">Private Care Suites</h3>
+</div>
+</div>
+<!-- Small Item: Staff -->
+<div class="gallery-card relative overflow-hidden rounded-xl shadow-lg item-sm">
+<img alt="Our Professional Staff" class="w-full h-full object-cover transition-transform duration-500" data-alt="Friendly professional dental hygienists smiling in their clinical attire within a bright modern hallway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkdICKjZEpEXeJHeAVeuy5NzqvY0a1rutzUIfH7YTcKqF02FB3y6WDYN1TDOJrLqYBvNg9PeFyLTCx5n2UaXYu90N7LDnfxQaYV3bHeZ1OQ0YYjVHtfpYuAa3Lg-nY6H3MWrLozkohK4R6gQNk-8UE13yytHIflRjoHDM28RW4_yfvdQyULixvBzdoMzHaOvaGA1T1rZkmW-HpkDNc1EBkKN_kGh4aJ409dAJkSh_ET7_ufyms3qXZtGHGw_abLZE3N1tSi99Woko"/>
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-md text-white">
+<p class="font-caption text-caption">Compassionate Care Specialists</p>
+</div>
+</div>
+<!-- Small Item: Lobby Details -->
+<div class="gallery-card relative overflow-hidden rounded-xl shadow-lg item-sm">
+<img alt="Reception Detail" class="w-full h-full object-cover transition-transform duration-500" data-alt="Close-up of a minimalist dental reception desk with fresh flowers and a subtle warm glow from designer lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW1HEFb82u0mZOG_8yRRvwCngHthrW3Wjp0nVpWwpYgK5Z4OpVmGlL9w0jedI0zrkLW5HfKwpIqGwQ_lF4VnGRZzHRGoCt7GruXnTqI-z4ONVut4eN9z1jkvyq4WigaMOZUGYtWs7QLCCChtYWLGOJ2AJs3gAoJnwngXMDfdbEMnGCuOnJ_mmNFazmkViynVvptoS2BvdekEXrU7ILnezyLW7x7KLfm88sJCdKFkZxSzXppbWATSoR6OMx7YnNwCHpjkD4uEqgf4E"/>
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-md text-white">
+<p class="font-caption text-caption">A Warm Welcome</p>
+</div>
+</div>
+<!-- Medium Item: Lobby -->
+<div class="gallery-card relative overflow-hidden rounded-xl shadow-lg item-md">
+<img alt="Main Lobby Area" class="w-full h-full object-cover transition-transform duration-500" data-alt="Spacious and serene dental clinic waiting area with mid-century modern furniture and floor-to-ceiling glass walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj4vDRklFeo_yxy6q4aqMxp7Iy7CWCgPFjffOHbTXGN6S4N8rLtLFUzIaaW5eXiliFkVIMUa67nmu0Ezqwjb1Mb5_F9SQCeCcv0vzQLVs7en6RtzRaB-PJeE7t_Ox548aTkMCzyrHwzEA1kbM0i6ugyVO-e-mbh0OuzMkC4T9QC6F0_sM4ffyB3iJwKdAfnbWiX-5z-vR7Jh5xXy0bBF5JmylVccy-rat1J9aHUNUkOcehnyCsmLEKlJwKv-ZyIoHNIq5271o1bGk"/>
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-md text-white">
+<span class="font-label-bold text-label-bold uppercase tracking-wider mb-xs opacity-80">Environment</span>
+<h3 class="font-h3 text-h3 text-xl">Healing Spaces</h3>
+</div>
+</div>
+<!-- Large Item: Result Showcase -->
+<div class="gallery-card relative overflow-hidden rounded-xl shadow-lg item-lg">
+<img alt="Brilliant Smile" class="w-full h-full object-cover transition-transform duration-500" data-alt="Close up of a person with perfectly white healthy teeth smiling confidently in soft natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGjoS1aS4sl7EyiHVk8XIYFFmrMcbCjOIV0pjgyXfSZrJBkEgqEMWIKpsTpdvKyQq-7Gj5yHPAi-Yz3Mff2khwUmtn0qHSyto9I0T4jAGWy2B2lFizb1ast5PDjj-9unqL35TIb-nASL0pfiZVVW6SLTTT2mbOlAwZVb67tBWBrC6Wd2htIe1Gi6Hk3nsJH7Mzr_s060dStaq9FPg3AImjvbElZTHV9cN0ySwZEk8RIw0eWoFWQBRBKDEqHpwiRPMN9E4Lsnqw_5w"/>
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-md text-white">
+<span class="font-label-bold text-label-bold uppercase tracking-wider mb-xs opacity-80">Results</span>
+<h3 class="font-h3 text-h3">Transformative Smiles</h3>
+</div>
+</div>
+<!-- Small Item: Lab -->
+<div class="gallery-card relative overflow-hidden rounded-xl shadow-lg item-sm">
+<img alt="In-house Lab" class="w-full h-full object-cover transition-transform duration-500" data-alt="Sterile dental laboratory with microscopic equipment and 3D dental printers in use by a technician" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-MhpbMDDJlSZJaU3x5K07HfncowAx8Nb1H_Oc89NKJNCa9x8CaOo3bTdaGRDkXmlqC6sB01adqD3m1zCx3iVM5WHUNoG5VkjPUod2ERr6YnnhfxLnDAwvBZjLzMQA2IEgP3g7jH0E3VBlgNSBLhxN4aZ62EhIhC4VYooT3VDHMeJOphhStLuHU3Z1ny0x3GMb7SkoqMw8kcuF29BSwJE5jmmVXeB0wRUuSZaF_meCk6ZhOi6DtBDCENxgFtbDA-n3CmY7SDPaOz8"/>
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-md text-white">
+<p class="font-caption text-caption">In-house Precision Lab</p>
+</div>
+</div>
+<!-- Medium Item: Consultation -->
+<div class="gallery-card relative overflow-hidden rounded-xl shadow-lg item-md">
+<img alt="Consultation Room" class="w-full h-full object-cover transition-transform duration-500" data-alt="Doctor and patient reviewing digital x-rays on a large wall-mounted monitor in a professional consultation office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCokN-IjaJ3fqiR9a21nPXEZOfXQ0u9nGjsv4SfP5KvUn2_r47FEgujM2f55PactFWPHcPmUhv5mH24vKpWPxwSg60ohjWFDEg7o0xwOExiW2KJ5KclIhhwKOoJwg5TQrVDo8NlzIBHC4gYctVGLDAW_ZgrNyPQpGuTfVCHMOOJaVWNWPTOHTGrC3ex_oLNcjeRauH4O7qptz9cl9PCO0vCYxom6V7B_vqR7xBotMY6saTU2zulsT6CchSZmWhPBGoxdSsngjL4hvw"/>
+<div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-md text-white">
+<span class="font-label-bold text-label-bold uppercase tracking-wider mb-xs opacity-80">Transparency</span>
+<h3 class="font-h3 text-h3 text-xl">Clear Consultations</h3>
+</div>
+</div>
+</div>
+<!-- Trust Bar / Stats -->
+<section class="mt-xl py-lg bg-surface-container rounded-2xl flex flex-wrap justify-around items-center gap-md text-center px-md border border-outline-variant/30">
+<div>
+<div class="font-h2 text-h2 text-primary">15+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Specialists</div>
+</div>
+<div>
+<div class="font-h2 text-h2 text-primary">25k+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Smiles Restored</div>
+</div>
+<div>
+<div class="font-h2 text-h2 text-primary">4.9/5</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Patient Rating</div>
+</div>
+<div>
+<div class="font-h2 text-h2 text-primary">100%</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Digital Care</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 font-serif text-sm Newsreader full-width border-t mt-20 border-t border-slate-200 dark:border-slate-800">
+<div class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-lg font-bold text-blue-900 dark:text-white">Aether Dental</div>
+<p class="text-slate-500 dark:text-slate-400 text-center md:text-left max-w-xs">
+                    © 2024 Aether Dental Clinic. Clinical Excellence &amp; Compassionate Care.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Patient Rights</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Careers</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

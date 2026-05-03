@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#444651",
+                    "primary-fixed": "#dce1ff",
+                    "on-secondary-fixed-variant": "#005047",
+                    "primary-container": "#1e3a8a",
+                    "on-primary-container": "#90a8ff",
+                    "secondary-container": "#62fae3",
+                    "secondary": "#006b5f",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#ff8897",
+                    "tertiary-fixed": "#ffdadc",
+                    "on-primary-fixed-variant": "#264191",
+                    "outline-variant": "#c5c5d3",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#4059aa",
+                    "tertiary-container": "#7f112d",
+                    "inverse-surface": "#2d3133",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#400010",
+                    "surface-bright": "#f7f9fb",
+                    "background": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary-fixed-dim": "#ffb2b9",
+                    "inverse-primary": "#b6c4ff",
+                    "on-background": "#191c1e",
+                    "secondary-fixed-dim": "#3cddc7",
+                    "primary": "#00236f",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "on-secondary": "#ffffff",
+                    "outline": "#757682",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#00201c",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#00164e",
+                    "surface-container": "#eceef0",
+                    "on-surface": "#191c1e",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary": "#5b001a",
+                    "secondary-fixed": "#62fae3",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-secondary-container": "#007165",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-tertiary-fixed-variant": "#891933"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "gutter": "24px",
+                    "xl": "80px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "h2": ["Newsreader"],
+                    "label-bold": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Newsreader"],
+                    "h3": ["Newsreader"],
+                    "body-md": ["Inter"],
+                    "caption": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "h3": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f7f9fb;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-white/80 backdrop-blur-md dark:bg-slate-950/80 border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm dark:shadow-none docked full-width top sticky z-50">
+<div class="flex justify-between items-center w-full px-6 md:px-12 py-4 max-w-full">
+<div class="text-xl font-bold text-blue-900 dark:text-white font-serif tracking-tight Newsreader">
+                Aether Dental
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-900 dark:text-white border-b-2 border-blue-900 dark:border-blue-400 pb-1 font-serif font-medium tracking-tight Newsreader hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium font-serif font-medium tracking-tight Newsreader hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium font-serif font-medium tracking-tight Newsreader hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Gallery</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium font-serif font-medium tracking-tight Newsreader hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Contact</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium font-serif font-medium tracking-tight Newsreader hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Patient Portal</a>
+</div>
+<button class="bg-[#FF7F50] text-white px-6 py-2.5 rounded-lg font-label-bold text-label-bold hover:scale-[1.02] active:scale-95 duration-200 transition-transform shadow-lg shadow-[#FF7F50]/20">
+                Book Now
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center pt-16 hero-gradient" data-alt="modern luxury dental clinic interior with soft natural lighting and minimalist white architectural lines">
+<div class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-3 rounded-full bg-secondary-container text-on-secondary-container text-caption font-label-bold mb-6">
+                        Excellence in Dental Care
+                    </span>
+<h1 class="font-h1 text-h1 text-primary mb-6">
+                        Your Smile, <br/><span class="italic text-secondary">Our Passion</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+                        Experience premium dental care in a comfortable environment designed for your peace of mind. We combine advanced technology with a compassionate touch.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#FF7F50] text-white px-8 py-4 rounded-lg font-label-bold text-label-bold hover:scale-[1.05] active:scale-95 transition-all shadow-xl shadow-[#FF7F50]/30">
+                            Book Your Appointment
+                        </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-label-bold text-label-bold hover:bg-primary/5 transition-all">
+                            View Our Services
+                        </button>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
+<img alt="Professional Dentist" class="relative z-10 rounded-2xl shadow-2xl object-cover aspect-[4/5] border-8 border-white" data-alt="friendly professional dentist in a modern white clinic smiling warmly at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcxS36wc1CJJ8waKABf-DHFsittCtkqI_Za-C-G4ciuJK1YpDGRuMKLqC8yXOFR4Z11-OMFt1k_BRp7yO6Q2Jxm7dp6MlMZCBlwht3l08stAER4aSKzrLCzpmCek7rSgsORIaXxB4ZR2KF6bHZDfGUFFdnw_SKmR59O7BkCxI_46vQzEH97FYiN153voB6CeI70nmynZhQD6POax-AHfHb6uE8wDNBN-0brNWFebWxM6xh3bgTzp1W-Kgz0D_wrHYVwcWCvDRZVDE"/>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-white py-12 border-y border-slate-100">
+<div class="container mx-auto px-6 md:px-12">
+<p class="text-center text-caption font-label-bold text-outline uppercase tracking-widest mb-8">Trusted by Insurance Providers &amp; Health Networks</p>
+<div class="flex flex-wrap justify-center items-center gap-12 grayscale opacity-40">
+<span class="text-h3 font-h3">HEALTHCORP</span>
+<span class="text-h3 font-h3">MEDICARE</span>
+<span class="text-h3 font-h3">AETNA</span>
+<span class="text-h3 font-h3">BLUECROSS</span>
+</div>
+</div>
+</section>
+<!-- Highlights Section -->
+<section class="py-xl bg-surface">
+<div class="container mx-auto px-6 md:px-12">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-primary mb-4">The Aether Standard</h2>
+<p class="font-body-md text-on-surface-variant max-w-xl mx-auto">We redefine the dental experience by prioritizing your comfort and leveraging the latest innovations in clinical dentistry.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Feature 1 -->
+<div class="bg-white p-8 rounded-xl shadow-[0_30px_40px_rgba(30,58,138,0.05)] hover:translate-y-[-8px] transition-transform duration-300 border border-slate-50">
+<div class="w-16 h-16 bg-secondary-container/30 flex items-center justify-center rounded-lg mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="biotech">biotech</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-4">Advanced Technology</h3>
+<p class="font-body-md text-on-surface-variant">Using 3D digital imaging and laser dentistry to ensure precise, efficient, and minimally invasive treatments.</p>
+<a class="inline-flex items-center mt-6 text-secondary font-label-bold hover:gap-2 transition-all" href="#">
+                            Learn More <span class="material-symbols-outlined ml-1">chevron_right</span>
+</a>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white p-8 rounded-xl shadow-[0_30px_40px_rgba(30,58,138,0.05)] hover:translate-y-[-8px] transition-transform duration-300 border border-slate-50">
+<div class="w-16 h-16 bg-secondary-container/30 flex items-center justify-center rounded-lg mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="groups">groups</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-4">Expert Team</h3>
+<p class="font-body-md text-on-surface-variant">Our board-certified specialists bring decades of experience and ongoing clinical research to every patient chair.</p>
+<a class="inline-flex items-center mt-6 text-secondary font-label-bold hover:gap-2 transition-all" href="#">
+                            Meet Specialists <span class="material-symbols-outlined ml-1">chevron_right</span>
+</a>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white p-8 rounded-xl shadow-[0_30px_40px_rgba(30,58,138,0.05)] hover:translate-y-[-8px] transition-transform duration-300 border border-slate-50">
+<div class="w-16 h-16 bg-secondary-container/30 flex items-center justify-center rounded-lg mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="spa">spa</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-4">Comfort First</h3>
+<p class="font-body-md text-on-surface-variant">From sedation options to sensory-calming environments, we ensure your visit is completely anxiety-free.</p>
+<a class="inline-flex items-center mt-6 text-secondary font-label-bold hover:gap-2 transition-all" href="#">
+                            Our Amenities <span class="material-symbols-outlined ml-1">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-xl relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-container opacity-5"></div>
+<div class="container mx-auto px-6 md:px-12 relative z-10">
+<div class="max-w-4xl mx-auto bg-white p-12 md:p-20 rounded-3xl shadow-xl border border-slate-100 flex flex-col md:flex-row items-center gap-12">
+<div class="w-48 h-48 flex-shrink-0 relative">
+<img alt="Patient" class="rounded-full w-full h-full object-cover shadow-lg border-4 border-white" data-alt="portrait of a young woman with a genuine radiant smile in soft natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNQbngS5fYlDj3_H-LjwzwG-07jpObJeyEPJ-V8VjK2ZWgTzJOe9HLUOqv5SM3nFFcZ0d36IaFnsap_zii59tW9g7MnAytyAqk8XgKgibdodcZLOTnST5uv_wZP-U3j5EN9ffQrfyPrBmCnqaLYtrxiCFoEaQCBTPA80nEPfk8ko80U3qbmxPsQ995MdzW90AUsFugutu3CyPHcosQ0DWbfkhal8SXttAdXKw4Q732FETVSeN5k9zOeP61uQacinI3vo5lmja1Inc"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary text-white p-3 rounded-full">
+<span class="material-symbols-outlined" data-icon="format_quote">format_quote</span>
+</div>
+</div>
+<div>
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-yellow-400" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-h3 text-h3 text-primary italic mb-8 leading-relaxed">
+                            "Aether Dental completely changed my perspective on dentistry. The facility feels like a high-end spa, and the clinical care was the most thorough I've ever experienced."
+                        </p>
+<div>
+<p class="font-label-bold text-label-bold text-primary">Sarah J. Miller</p>
+<p class="font-caption text-caption text-outline">Patient since 2022</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-xl">
+<div class="container mx-auto px-6 md:px-12">
+<div class="bg-primary rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<h2 class="font-h1 text-h1 text-white mb-6 relative z-10">Start Your Journey To A <br/>Healthier Smile Today</h2>
+<p class="text-primary-fixed font-body-lg mb-10 max-w-2xl mx-auto relative z-10">Schedule your comprehensive consultation with our clinical experts and discover the Aether difference.</p>
+<button class="bg-[#FF7F50] text-white px-12 py-5 rounded-xl font-label-bold text-body-lg hover:scale-105 transition-all shadow-2xl shadow-black/20 relative z-10">
+                        Book Your Consultation
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 full-width border-t mt-20 border-t border-slate-200 dark:border-slate-800">
+<div class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-lg font-bold text-blue-900 dark:text-white font-serif Newsreader">
+                    Aether Dental
+                </div>
+<p class="text-slate-500 dark:text-slate-400 font-serif text-sm Newsreader max-w-xs text-center md:text-left">
+                    © 2024 Aether Dental Clinic. Clinical Excellence &amp; Compassionate Care.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 font-serif text-sm Newsreader" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 font-serif text-sm Newsreader" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 font-serif text-sm Newsreader" href="#">Patient Rights</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 font-serif text-sm Newsreader" href="#">Careers</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-blue-900 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-blue-900 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
