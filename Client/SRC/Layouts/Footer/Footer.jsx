@@ -31,8 +31,8 @@ export default function Footer() {
         </div>
         <div>
             <ul className="flex gap-3">
-                <a href="#"><li className="border-2 border-[#8b8b8b3f] rounded-full p-2 text-[#1E3A8A]"><FaGlobeAmericas size={20}/></li></a>
-                <a href="#"><li className="border-2 border-[#8b8b8b3f] rounded-full p-2 text-[#1E3A8A]"><CiShare2 size={20} /></li></a>
+                <a href="#"><li className="border-2 border-[#8b8b8b3f] rounded-full p-2 text-[#1E3A8A] hover:bg-[#1E3A8A] hover:text-white transition-colors duration-200"><FaGlobeAmericas size={20}/></li></a>
+                <a href="#"><li className="border-2 border-[#8b8b8b3f] rounded-full p-2 text-[#1E3A8A] hover:bg-[#1E3A8A] hover:text-white transition-colors duration-200"><CiShare2 size={20} /></li></a>
             </ul>
         </div>
       </div>
