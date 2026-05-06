@@ -16,7 +16,7 @@ The system shall allow users to log in using email and password.
 The system shall allow patients to book appointments.
 
 ### FR4
-The system shall allow patients to Request appointments Cancellation.
+The system shall allow patients to Request appointments Cancellation with a reason.
 
 ### FR5
 The system shall allow patients to Request appointments re-scheduling.
@@ -35,7 +35,7 @@ The system shall allow dentists to view their schedules.
 The system shall allow dentists to update appointment status.
 
 ### FR9
-The system shall allow dentists to approve appointment re-scheduling.
+The system shall allow dentists to approve appointment re-scheduling subject to patient approval..
 
 ### FR10
 The system shall allow dentists to request appointment cancellation.
