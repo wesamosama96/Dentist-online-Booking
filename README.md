@@ -38,7 +38,7 @@ Phase 1 documentation can be found in the `/docs` folder.
 |------|--------|
 | Backend Development | Muhammad Rashwan, Muhammad Fakhr |
 | Frontend Development | Muhammad Rashwan, Islam Badawy |
-| UI/UX Design | Ahmed Moselhy |
+| UI/UX Design | Ahmed Moselhy & Wesam Osama |
 | Documentation | Entire Team |
 | Environment Setup / DevOps | Wesam Osama & Ahmed Moselhy |
 
