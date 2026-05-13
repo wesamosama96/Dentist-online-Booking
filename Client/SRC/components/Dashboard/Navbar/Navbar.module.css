@@ -1,0 +1,18 @@
+.welcome-section {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 70%;
+  align-self: start;
+  display: flex;
+  margin: auto;
+}
+
+.icon {
+  color: #1E3A8A;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.h2 {
+  color: #1E3A8A;
+}
