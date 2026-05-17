@@ -1,0 +1,152 @@
+.heroWrapper {
+  padding: 70px 20px;
+}
+
+/* HERO */
+.heroTitle {
+  font-size: 42px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 18px;
+}
+
+.heroText {
+  font-size: 18px;
+  color: #444651;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* CONTACT FORM */
+
+.formWrapper {
+  padding: 20px;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.input,
+.textarea {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #1e3a8a;
+  box-shadow: none;
+}
+
+/* Button */
+.submitBtn {
+  background-color: #ff7f50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: #cc5c3a;
+}
+
+/* map section */
+
+.mapWrapper {
+  padding: 20px;
+}
+
+/* TITLE */
+.mapTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+/* MAP CONTAINER */
+.mapBox {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* IFRAME */
+.mapBox iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+/* INFO UNDER MAP */
+.mapInfo {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* EACH LINE */
+.mapInfo p {
+  font-size: 14px;
+  color: #444651;
+  display: flex;
+  align-items: center;
+}
+
+/* ICON */
+.iconInline {
+  margin-right: 10px;
+  color: #1e3a8a;
+  font-size: 14px;
+}
+
+/* parenter section */
+
+.partnersWrapper {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.partnersTitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #757682;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* container */
+.partnersList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* each item */
+.partnerItem {
+  font-size: 22px;
+  font-weight: 600;
+  color: #191c1e;
+  opacity: 0.3;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.partnerItem:hover {
+  opacity: 0.5;
+}

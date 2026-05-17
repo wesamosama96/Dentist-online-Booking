@@ -1,23 +1,31 @@
+import { NavLink } from "react-router-dom";
+
 export default function Navbar() {
-  const navItems = ["Home", "Services", "Gallery", "Contact", "Patient Portal"];
+  const navItems = [
+    {name: "Home", path: "/"},
+    {name: "Services", path: "/services"},
+    {name: "Gallery", path: "/gallery"},
+    {name: "Contact", path: "/contact"},
+    {name: "Patient Portal", path:"/dashboard"}
+  ];
   return (
     <>
       <nav className="bg-white px-4 md:px-8 lg:px-12 xl:px-20 py-5 flex items-center justify-between relative">
-        <a href="#" className="text-2xl text-[#1E3A8A]">
+        <NavLink to="/" className="text-2xl text-[#1E3A8A]">
           <span className="font-bold" style={{ fontFamily: "Oldenburg" }}>
             A
           </span>
           ether<span style={{ fontFamily: "Oldenburg" }}>D</span>ental
-        </a>
+        </NavLink>
         <div className="hidden md:flex items-center px-1 py-1 gap-10">
           {navItems.map((item) => (
-            <a
-              key={item}
-              href="#"
+            <NavLink
+              key={item.name}
+              to={item.path}
               className={`text-sm transition-colors ${item === "Products" ? "bg-white border border-zinc-200 font-medium text-zinc-800 hover:text-[#1E3A8A] hover:border-b-2 hover:border-[#1E3A8A]" : "text-zinc-500 hover:text-[#1E3A8A] hover:border-b-2 hover:border-[#1E3A8A]"}`}
             >
-              {item}
-            </a>
+              {item.name}
+            </NavLink>
           ))}
         </div>
         <button className="flex items-center justify-center gap-2.5 bg-[#FF7F50] text-zinc-50 text-sm font-medium px-5 py-1 rounded-full cursor-pointer border-0 w-fit hover:bg-[#f35727] transition-colors">
