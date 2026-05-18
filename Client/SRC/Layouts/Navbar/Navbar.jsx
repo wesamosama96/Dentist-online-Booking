@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const navItems = [
-    {name: "Home", path: "/"},
-    {name: "Services", path: "/services"},
-    {name: "Gallery", path: "/gallery"},
-    {name: "Contact", path: "/contact"},
-    {name: "Patient Portal", path:"/dashboard"}
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Contact", path: "/contact" },
+    { name: "Patient Portal", path: "/dashboard" }
   ];
   return (
     <>

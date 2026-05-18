@@ -120,11 +120,12 @@
 }
 
 .partnersTitle {
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 2px;
-  color: #757682;
+  color: #94a3b8;
   margin-bottom: 30px;
   text-transform: uppercase;
+  opacity: 0.6;
 }
 
 /* container */
@@ -134,13 +135,14 @@
   align-items: center;
   gap: 60px;
   flex-wrap: wrap;
+  margin-bottom: 120px;
 }
 
 /* each item */
 .partnerItem {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
-  color: #191c1e;
+  color: #94a3b8;
   opacity: 0.3;
   text-transform: uppercase;
   cursor: pointer;

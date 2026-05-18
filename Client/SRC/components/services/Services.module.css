@@ -1,0 +1,200 @@
+.heroSection {
+  padding: 120px 20px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at left center,
+      rgba(171, 230, 223, 0.45) 0%,
+      rgba(171, 230, 223, 0) 30%
+    ),
+    #f7f8fa;
+}
+
+/* SMALL LABEL */
+.heroLabel {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+/* MAIN TITLE */
+.heroTitle {
+  font-size: 68px;
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-bottom: 30px;
+
+  font-family: "Newsreader", serif;
+}
+
+/* DESCRIPTION */
+.heroText {
+  max-width: 780px;
+  margin: 0 auto;
+
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* Services.module.css */
+
+/* .pd {
+  
+} */
+
+.services {
+  background-color: #f5f6f8;
+  padding-bottom: 100px !important;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  background-color: #eef2f7;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0d2d83;
+  font-size: 20px;
+
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 30px;
+  color: #18337a;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.desc {
+  color: #666;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.tag {
+  background-color: #f1f1f1;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+
+  margin-top: 20px;
+  border-radius: 14px;
+}
+
+/* Emergency Card */
+
+.emergencyCard {
+  background-color: #03227d;
+}
+
+.emergencyTitle {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.emergencyDesc {
+  color: #ddd;
+  line-height: 1.8;
+}
+
+.emergencyIcon {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.callBtn {
+  display: inline-block;
+  margin-top: 20px;
+
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ConsultationSection*/
+
+.consultation {
+  background-color: #f2f4f6;
+  padding-top: 50px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #18337a;
+
+  margin-bottom: 25px;
+}
+
+.desc {
+  max-width: 750px;
+  margin: auto;
+
+  font-size: 17px;
+  line-height: 1.8;
+  color: #666;
+
+  margin-bottom: 40px;
+}
+
+.primaryBtn {
+  border: none;
+  background-color: #ff7f4d;
+  color: white;
+
+  padding: 16px 34px;
+  border-radius: 40px;
+
+  font-size: 16px;
+  transition: 0.3s;
+  box-shadow: 0 8px 18px rgba(255, 127, 77, 0.3);
+}
+
+.primaryBtn:hover {
+  background-color: #f46f3b;
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: #18337a;
+
+  border: 2px solid #18337a;
+
+  padding: 14px 34px;
+  border-radius: 40px;
+
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.secondaryBtn:hover {
+  background-color: #18337a;
+  color: white;
+}
