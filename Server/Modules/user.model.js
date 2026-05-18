@@ -1,5 +1,5 @@
-const mongoose = require("mongoose")
-const bcrypt = require("bcrypt")
+const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema(
   {
@@ -22,20 +22,22 @@ const userSchema = new mongoose.Schema(
       default: "patient",
     },
   },
-  { timestamps: true }
-)
+  { timestamps: true },
+);
 
 //  Hash Password
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next()
-
-  this.password = await bcrypt.hash(this.password, 10)
-  next()
-})
+userSchema.pre("save", async function () {
+  if (!this.isModified("password")) return;
+  try {
+    this.password = await bcrypt.hash(this.password, 10);
+  } catch (error) {
+    throw error;
+  }
+});
 
 //  Compare Password
 userSchema.methods.matchPassword = async function (enteredPassword) {
-  return await bcrypt.compare(enteredPassword, this.password)
-}
+  return await bcrypt.compare(enteredPassword, this.password);
+};
 
-module.exports = mongoose.model("User", userSchema)
+module.exports = mongoose.model("User", userSchema);

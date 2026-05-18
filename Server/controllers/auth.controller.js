@@ -1,9 +1,9 @@
 const jwt = require("jsonwebtoken")
-const User = require("../models/user.model")
+const User = require("../Modules/user.model")
 
 // Generate JWT Token
-const generateToken = (id) =>
-  jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "3d" })
+const generateToken = (id, role) =>
+  jwt.sign({ id, role }, process.env.JWT_SECRET, { expiresIn: "3d" })
 
 // ================= REGISTER =================
 const register = async (req, res, next) => {
@@ -42,7 +42,7 @@ const register = async (req, res, next) => {
         email: user.email,
         role: user.role,
       },
-      token: generateToken(user._id),
+      token: generateToken(user._id, user.role),
     })
 
   } catch (err) {
@@ -64,7 +64,7 @@ const login = async (req, res, next) => {
     if (!user || !(await user.matchPassword(password))) {
       return res.status(401).json({ message: "Invalid email or password" })
     }
-
+    console.log(user)
     res.json({
       user: {
         _id: user._id,
@@ -72,7 +72,7 @@ const login = async (req, res, next) => {
         email: user.email,
         role: user.role,
       },
-      token: generateToken(user._id),
+      token: generateToken(user._id, user.role),
     })
 
   } catch (err) {
