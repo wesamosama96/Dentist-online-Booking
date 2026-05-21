@@ -1,0 +1,156 @@
+.Appointments_text{
+    color: #00236F;
+}
+.Appointments_text h2{
+    font-weight: bold;
+    font-size: 44px;
+}
+.Appointments_text p{
+    font-size: 20px;
+}
+.button{
+    width: 380px!important;
+    height: 80px!important;
+    background-color: #00236F!important;
+    text-align: center!important; 
+    border-radius: 40px!important;
+    padding-top: 20px!important;
+    color: white!important;
+
+}
+.button:hover{
+    background-color: #FF7F50!important ;
+}
+
+.button i{
+    margin-top: 4px;
+    font-size: 20px;
+}
+.button h3{
+    font-size: 25px;
+}
+.calendarBox {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.activeDay {
+  background: #0d3b66 !important;
+  color: white !important;
+  border-radius: 50%;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  border-left: 4px solid #0d9488;
+  color: #00236F;
+}
+
+
+.status {
+  background: #00236F;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  
+
+}
+.upcoming {
+    color: #00236F;
+    font-size: 27px;
+}
+.icon_oct{
+  
+}
+
+
+.History {
+    margin-top: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;                             
+}
+
+.History_content {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+    width: auto;                  
+    background-color: rgba(128, 128, 128, 0.089);    
+    border-radius: 12px;
+    padding: 15px 25px;    
+    font-size: 25px;       
+}
+
+.History_text {
+    flex: 1;                     
+    max-width: 450px;           
+}
+
+
+.history_card_wrapper {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05); /* شادو ناعم جداً */
+    overflow: hidden;
+    margin-top: 15px;
+    border: 1px solid #f1f3f5;
+}
+
+.Deep {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    border-bottom: 1px solid #f4f6f8; 
+}
+
+.Deep:last-child {
+    border-bottom: none; 
+}
+
+
+.Deep_info {
+    text-align: left;
+}
+
+.Deep h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 4px 0;
+}
+
+.Deep p {
+    font-size: 13px;
+    color: #6c757d;
+    margin: 0;
+}
+
+.Deep img {
+    width: 10px;
+    height: auto;
+    opacity: 0.3; 
+}
+
+.view_all_btn {
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    color: #00236F;
+    cursor: pointer;
+    background-color: white;
+    border-top: 1px solid #f4f6f8;
+    transition: background 0.2s;
+}
+
+.view_all_btn:hover {
+    background-color: #f8f9fa;
+}

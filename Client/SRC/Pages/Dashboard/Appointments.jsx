@@ -1,5 +1,6 @@
+import AppointmentTable from "../../components/Dashboard/AppointmentTable/AppointmentTable" 
 export default function Appointments() {
   return (
-    <div>Appointments</div>
+    <AppointmentTable/>
   )
 }

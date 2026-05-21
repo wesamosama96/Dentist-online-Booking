@@ -1,0 +1,97 @@
+
+.welcome_card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    height: 100%; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    gap: 20px;
+}
+
+.welcome_text {
+    flex: 1;
+}
+
+.welcome_text h2 {
+    color: #00236F;
+}
+
+.next_visit {
+    background-color: #f4f6f8;
+    border-radius: 12px;
+    display: inline-flex; 
+    min-width: 280px;
+}
+
+.welcome_img img {
+    max-width: 220px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.clinic_image {
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; 
+    will-change: transform; 
+}
+
+.clinic_image:hover {
+    transform: scale(1.06) rotate(3deg);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.health_card {
+    background-color: #00236F;
+    border-radius: 16px;
+    height: 100%; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.next {
+    color: #00236F;
+}
+
+@media (max-width: 768px) {
+    .welcome_card {
+        text-align: center;
+    }
+    .next_visit {
+        justify-content: center;
+        width: 100%;
+    }
+    .welcome_img img {
+        max-width: 100%;
+    }
+}
+
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 1px solid #00236F;
+    color: #00236F;
+    padding: 30px 20px; 
+    min-height: 150px; 
+    transition: all 0.5s ease;
+}
+
+.card i {
+    font-size: 2rem; 
+}
+
+.card:hover {
+    background-color: #00236F;
+    color: #ffffff;
+}
+
+.card:hover i {
+    color: #ffffff;
+}
+
