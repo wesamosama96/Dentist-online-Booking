@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#444651",
+                        "primary-fixed": "#dce1ff",
+                        "on-secondary-fixed-variant": "#005047",
+                        "primary-container": "#1e3a8a",
+                        "on-primary-container": "#90a8ff",
+                        "secondary-container": "#62fae3",
+                        "secondary": "#006b5f",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff8897",
+                        "tertiary-fixed": "#ffdadc",
+                        "on-primary-fixed-variant": "#264191",
+                        "outline-variant": "#c5c5d3",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#4059aa",
+                        "tertiary-container": "#7f112d",
+                        "inverse-surface": "#2d3133",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#400010",
+                        "surface-bright": "#f7f9fb",
+                        "background": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "inverse-primary": "#b6c4ff",
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#3cddc7",
+                        "primary": "#00236f",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-secondary": "#ffffff",
+                        "outline": "#757682",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#00201c",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#00164e",
+                        "surface-container": "#eceef0",
+                        "on-surface": "#191c1e",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary": "#5b001a",
+                        "secondary-fixed": "#62fae3",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-container": "#007165",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-tertiary-fixed-variant": "#891933"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Newsreader"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Newsreader"],
+                        "h3": ["Newsreader"],
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "h3": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-coral { background-color: #FF7F50; } /* Mapping "Warm Coral" as suggested in Brand Style */
+        .text-midnight { color: #00236F; } /* Mapping "Midnight Navy" */
+        .text-soft-teal { color: #006B5F; } /* Mapping "Soft Teal" */
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-white/80 backdrop-blur-md dark:bg-slate-950/80 border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm dark:shadow-none font-serif font-medium tracking-tight Newsreader sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 md:px-12 py-4 max-w-full">
+<div class="text-xl font-bold text-blue-900 dark:text-white">Aether Dental</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Home</a>
+<a class="text-blue-900 dark:text-white border-b-2 border-blue-900 dark:border-blue-400 pb-1 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Gallery</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Contact</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="#">Patient Portal</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-coral text-white px-6 py-2.5 rounded-full font-label-bold hover:scale-[1.02] active:scale-95 duration-200 transition-transform shadow-md">
+                    Book Now
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative pt-24 pb-16 px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
+<div class="flex flex-col items-center text-center space-y-6">
+<span class="text-soft-teal font-label-bold tracking-widest uppercase">Expertise &amp; Compassion</span>
+<h1 class="font-h1 text-h1 text-blue-900 max-w-3xl">Our Dental Services</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Experience clinical excellence in a calm, modern environment. From routine care to advanced aesthetics, we specialize in maintaining your vibrant oral health.
+                </p>
+</div>
+<!-- Abstract background shape -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
+</section>
+<!-- Services Grid (Bento Style) -->
+<section class="px-6 md:px-12 py-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6">
+<!-- General Dentistry - Large Card -->
+<div class="md:col-span-6 lg:col-span-8 bg-white p-8 rounded-xl shadow-[0_10px_40px_-15px_rgba(30,58,138,0.08)] flex flex-col justify-between border border-white hover:-translate-y-2 transition-transform duration-300">
+<div>
+<div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-soft-teal text-3xl" data-icon="dentistry">dentistry</span>
+</div>
+<h3 class="font-h3 text-h3 text-blue-900 mb-4">General Dentistry</h3>
+<p class="text-on-surface-variant font-body-md mb-8 max-w-md">Comprehensive preventative care including routine cleanings, fillings, and health screenings tailored to your family's needs.</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-1.5 bg-surface-container rounded-full text-caption font-label-bold">Exams</span>
+<span class="px-4 py-1.5 bg-surface-container rounded-full text-caption font-label-bold">Cleanings</span>
+<span class="px-4 py-1.5 bg-surface-container rounded-full text-caption font-label-bold">Fillings</span>
+</div>
+</div>
+<!-- Cosmetic Whitening - Square Card -->
+<div class="md:col-span-3 lg:col-span-4 bg-white p-8 rounded-xl shadow-[0_10px_40px_-15px_rgba(30,58,138,0.08)] border border-white hover:-translate-y-2 transition-transform duration-300">
+<div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-soft-teal text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-h3 text-h3 text-blue-900 mb-4">Cosmetic Whitening</h3>
+<p class="text-on-surface-variant font-body-md">Professional in-office whitening treatments that restore brilliance to your smile in just one visit.</p>
+</div>
+<!-- Orthodontics - Tall Card -->
+<div class="md:col-span-3 lg:col-span-4 bg-white p-8 rounded-xl shadow-[0_10px_40px_-15px_rgba(30,58,138,0.08)] border border-white hover:-translate-y-2 transition-transform duration-300">
+<div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-soft-teal text-3xl" data-icon="align_horizontal_center">align_horizontal_center</span>
+</div>
+<h3 class="font-h3 text-h3 text-blue-900 mb-4">Orthodontics</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Straighten your teeth with modern solutions including clear aligners and traditional braces for all ages.</p>
+<img class="w-full h-40 object-cover rounded-lg" data-alt="close-up of clear dental aligner on a clean minimalist surface with soft teal studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ6bzyydCTsNjI6VdkEh1eX5OPvCQ0ojGsUreaTVtDS2p6zK6XZVfVlmkpp_j_hwNknotivcoAw2S2GWxhg6IPgrYRrGI8nSWU7XCtvryAJ1Xsk-bcf2A_KXFMv6q9B8sEz7xK5B1CEtYon9jL8EZQBy_Y7qzREXOYJR6_nT7IhHBBTMOarYs_xh21ogaYRPzLWLkVPhS2RjoDseohGMIn-g6zX2E2kzJrGAC9JiAR-hjW-tK41iShy2DRA60JM0_83W6dtg9XTa0"/>
+</div>
+<!-- Dental Implants - Wide Card -->
+<div class="md:col-span-3 lg:col-span-4 bg-white p-8 rounded-xl shadow-[0_10px_40px_-15px_rgba(30,58,138,0.08)] border border-white hover:-translate-y-2 transition-transform duration-300">
+<div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-soft-teal text-3xl" data-icon="build">build</span>
+</div>
+<h3 class="font-h3 text-h3 text-blue-900 mb-4">Dental Implants</h3>
+<p class="text-on-surface-variant font-body-md">Permanent solutions for missing teeth that look, feel, and function like natural tooth structures.</p>
+</div>
+<!-- Emergency Care - Highlight Card -->
+<div class="md:col-span-3 lg:col-span-4 bg-primary text-on-primary p-8 rounded-xl shadow-[0_10px_40px_-15px_rgba(30,58,138,0.3)] border border-blue-800 hover:-translate-y-2 transition-transform duration-300">
+<div class="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="emergency">emergency</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Emergency Care</h3>
+<p class="text-primary-fixed/80 font-body-md mb-6">Urgent dental assistance for pain, injuries, or broken restorations. We prioritize same-day appointments.</p>
+<div class="flex items-center gap-2 font-label-bold">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+                        Call Now: (555) 012-3456
+                    </div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-xl px-6 md:px-12 py-24 bg-surface-container-low">
+<div class="max-w-4xl mx-auto text-center space-y-8">
+<h2 class="font-h2 text-h2 text-blue-900">Didn't find what you're looking for?</h2>
+<p class="font-body-lg text-on-surface-variant">Our clinic offers a wide range of specialized procedures and patient-centered care plans. Contact our concierge team to discuss your unique needs.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-coral text-white px-8 py-4 rounded-full font-label-bold text-body-md hover:scale-105 active:scale-95 transition-all shadow-lg">
+                        Schedule a Consultation
+                    </button>
+<button class="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-full font-label-bold text-body-md hover:bg-blue-50 transition-all">
+                        Inquire About Services
+                    </button>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="py-16 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="flex flex-col items-center gap-8">
+<span class="text-caption font-label-bold text-outline uppercase tracking-widest">Accepted Insurances &amp; Partners</span>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale">
+<div class="h-8 w-24 bg-slate-300 rounded"></div>
+<div class="h-8 w-32 bg-slate-300 rounded"></div>
+<div class="h-8 w-28 bg-slate-300 rounded"></div>
+<div class="h-8 w-36 bg-slate-300 rounded"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 full-width border-t border-slate-200 dark:border-slate-800 mt-20 font-serif text-sm Newsreader">
+<div class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-lg font-bold text-blue-900 dark:text-white">Aether Dental Clinic</div>
+<p class="text-slate-500 dark:text-slate-400 text-center md:text-left max-w-xs">© 2024 Aether Dental Clinic. Clinical Excellence &amp; Compassionate Care.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Patient Rights</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Careers</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-900 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-blue-900 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

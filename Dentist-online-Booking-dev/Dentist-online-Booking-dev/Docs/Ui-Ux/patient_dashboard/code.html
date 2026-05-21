@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#444651",
+                    "primary-fixed": "#dce1ff",
+                    "on-secondary-fixed-variant": "#005047",
+                    "primary-container": "#1e3a8a",
+                    "on-primary-container": "#90a8ff",
+                    "secondary-container": "#62fae3",
+                    "secondary": "#006b5f",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#ff8897",
+                    "tertiary-fixed": "#ffdadc",
+                    "on-primary-fixed-variant": "#264191",
+                    "outline-variant": "#c5c5d3",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#4059aa",
+                    "tertiary-container": "#7f112d",
+                    "inverse-surface": "#2d3133",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#400010",
+                    "surface-bright": "#f7f9fb",
+                    "background": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary-fixed-dim": "#ffb2b9",
+                    "inverse-primary": "#b6c4ff",
+                    "on-background": "#191c1e",
+                    "secondary-fixed-dim": "#3cddc7",
+                    "primary": "#00236f",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "on-secondary": "#ffffff",
+                    "outline": "#757682",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#00201c",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#00164e",
+                    "surface-container": "#eceef0",
+                    "on-surface": "#191c1e",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary": "#5b001a",
+                    "secondary-fixed": "#62fae3",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-secondary-container": "#007165",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-tertiary-fixed-variant": "#891933"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "gutter": "24px",
+                    "xl": "80px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "h2": ["Newsreader"],
+                    "label-bold": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Newsreader"],
+                    "h3": ["Newsreader"],
+                    "body-md": ["Inter"],
+                    "caption": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "h3": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-full w-64 fixed left-0 top-0 hidden lg:flex flex-col bg-white border-r border-slate-200 shadow-xl z-50">
+<div class="flex flex-col h-full py-8 px-4 gap-2">
+<div class="mb-8 px-4">
+<span class="text-lg font-black text-blue-900 font-serif">Aether Dental</span>
+</div>
+<div class="flex flex-col items-center gap-2 mb-8 px-4">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-slate-100 ring-2 ring-blue-50 ring-offset-2">
+<img alt="Jane Doe" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional woman with a warm friendly smile, soft natural lighting, high-end studio photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl0ir5ZjcOulzIT_GLBUS031T6Lggs8IoKLpOuZZcCvpxORfDlDlMDPB0hbJb5xJ1_8eRUqYaNAB6oixNZGEJL3-1xEWPrdcicoZwbBABx2QlP-o5yavQeWb_ek2xfDfwcGU77p-X__3-mcvErrNgrdr8Ni77vRd6jGHJ8-NXU69-YE2SAnByZwv_Xq8lErnnEUnY6dsH8ZZn5XFtequgjHvALedqEGfTuTJU9WpRKKYgfH8IC4WWLCVgvH2IBMUENoEJPT5afV8U"/>
+</div>
+<div class="text-center">
+<p class="font-serif text-blue-900 font-bold">Jane Doe</p>
+<p class="text-xs text-slate-500 font-serif">Patient #8821</p>
+</div>
+</div>
+<nav class="space-y-1">
+<!-- Overview is Active -->
+<a class="bg-blue-50 text-blue-900 rounded-lg p-3 font-bold flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-serif">Overview</span>
+</a>
+<a class="text-slate-500 hover:bg-slate-50 hover:translate-x-1 rounded-lg p-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-serif">Appointments</span>
+</a>
+<a class="text-slate-500 hover:bg-slate-50 hover:translate-x-1 rounded-lg p-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="folder_shared">folder_shared</span>
+<span class="font-serif">Records</span>
+</a>
+<a class="text-slate-500 hover:bg-slate-50 hover:translate-x-1 rounded-lg p-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-serif">Billing</span>
+</a>
+<a class="text-slate-500 hover:bg-slate-50 hover:translate-x-1 rounded-lg p-3 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-serif">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-2">
+<button class="w-full py-3 bg-[#FF7F50] text-white rounded-lg font-label-bold text-label-bold shadow-lg hover:scale-[1.02] active:scale-95 transition-transform duration-200">
+                    New Appointment
+                </button>
+</div>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="lg:ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between px-8 w-full bg-white/50 backdrop-blur-sm h-16 border-b border-slate-100 sticky top-0 z-40">
+<h1 class="text-base font-bold text-blue-900 font-serif">Patient Dashboard</h1>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-slate-100 rounded-full transition-all active:scale-90">
+<span class="material-symbols-outlined text-blue-900" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-100 rounded-full transition-all active:scale-90">
+<span class="material-symbols-outlined text-blue-900" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<div class="h-8 w-px bg-slate-200 mx-2"></div>
+<button class="text-slate-400 font-serif hover:text-blue-900 transition-colors">Log Out</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="p-8 max-w-7xl mx-auto">
+<!-- Bento Layout Grid -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Welcome Card -->
+<section class="col-span-12 lg:col-span-8 bg-white p-lg rounded-xl shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<div class="flex-1 space-y-4 z-10">
+<h2 class="font-h2 text-h2 text-primary">Welcome back, Jane!</h2>
+<p class="font-body-lg text-on-surface-variant">Your oral health is looking great. You have an upcoming <span class="font-bold text-primary">Bi-Annual Cleaning</span> scheduled for next Tuesday.</p>
+<div class="flex gap-4 items-center p-4 bg-surface-container-low rounded-lg border border-outline-variant/30">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="event_available">event_available</span>
+<div>
+<p class="text-caption font-label-bold uppercase text-outline">Next Visit</p>
+<p class="text-body-md font-bold text-primary">Oct 24, 2024 at 10:30 AM</p>
+</div>
+</div>
+</div>
+<div class="w-48 h-48 rounded-2xl overflow-hidden shadow-lg transform rotate-2 z-10">
+<img alt="Aether Dental Clinic Room" class="w-full h-full object-cover" data-alt="Modern dental office with soft lighting, premium equipment, wooden accents, and a large window showing lush greenery outside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuKqOMoAIHG5YPlpk_AFtIWE1r9MmAKibgHyxYQo53fesQ71kSZ00uCfrv0fvMyBfZI7_ce4OtQLI9RiOHCgpc6LM2C6wEDw_S4d1zcfFTU3WILS28boIJ51Ihfs1UtCIbp2-0CGMJorVPw7JqPk1u6BnuQProjC_S4bvH7xYxEt7YrhnwHI0aNWp_GN8CuDG9w5Ei5OYwUnZaKpGxoZD3A6roASvACIGCoGqsU2YYksTIXtoq_5HhqoUylwScYi2h1Q30DC28GcY"/>
+</div>
+</section>
+<!-- Health Tips Sidebar Widget -->
+<aside class="col-span-12 lg:col-span-4 bg-primary text-on-primary p-md rounded-xl shadow-sm space-y-6 flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<h3 class="font-h3 text-h3 leading-none">Health Tips</h3>
+</div>
+<p class="font-body-md opacity-90">Did you know? Replacing your toothbrush every 3-4 months is essential for effective plaque removal.</p>
+<ul class="space-y-3 opacity-90 text-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm pt-1" data-icon="check_circle">check_circle</span>
+                                Floss at least once daily to remove food particles between teeth.
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm pt-1" data-icon="check_circle">check_circle</span>
+                                Drink plenty of water to wash away acids from foods.
+                            </li>
+</ul>
+</div>
+<button class="w-full py-2 bg-on-primary-container text-primary rounded-lg font-label-bold hover:bg-white transition-colors">
+                        Read More Tips
+                    </button>
+</aside>
+<!-- Quick Actions -->
+<section class="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6 py-4">
+<button class="group bg-[#FF7F50] p-6 rounded-xl text-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-4xl" data-icon="calendar_add_on">calendar_add_on</span>
+<span class="font-h3 text-h3">Book Now</span>
+</button>
+<button class="group bg-white p-6 rounded-xl border-2 border-primary text-primary shadow-sm hover:bg-primary hover:text-white transition-all flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-4xl" data-icon="description">description</span>
+<span class="font-h3 text-h3">View Records</span>
+</button>
+<button class="group bg-white p-6 rounded-xl border-2 border-slate-200 text-slate-700 shadow-sm hover:border-primary hover:text-primary transition-all flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-4xl" data-icon="credit_card">credit_card</span>
+<span class="font-h3 text-h3">Pay Bill</span>
+</button>
+</section>
+<!-- Appointment History -->
+<section class="col-span-12 bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+<div class="px-8 py-6 border-b border-slate-100 flex justify-between items-center">
+<h3 class="font-h3 text-h3 text-primary">Appointment History</h3>
+<button class="text-secondary font-label-bold hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low text-on-surface-variant text-caption uppercase font-label-bold">
+<tr>
+<th class="px-8 py-4">Service</th>
+<th class="px-8 py-4">Doctor</th>
+<th class="px-8 py-4">Date</th>
+<th class="px-8 py-4">Status</th>
+<th class="px-8 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-5">
+<div class="font-bold text-blue-900">Bi-Annual Cleaning</div>
+<div class="text-xs text-slate-500">Preventative Care</div>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">Dr. Sarah Miller</td>
+<td class="px-8 py-5 text-on-surface-variant">Oct 24, 2024</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container rounded-full text-xs font-bold">Confirmed</span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="p-2 hover:bg-slate-200 rounded-full transition-all">
+<span class="material-symbols-outlined text-slate-400" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-5">
+<div class="font-bold text-blue-900">Wisdom Tooth Consultation</div>
+<div class="text-xs text-slate-500">Oral Surgery</div>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">Dr. James Wilson</td>
+<td class="px-8 py-5 text-on-surface-variant">Aug 12, 2024</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-full text-xs font-bold">Completed</span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="p-2 hover:bg-slate-200 rounded-full transition-all">
+<span class="material-symbols-outlined text-slate-400" data-icon="download">download</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-8 py-5">
+<div class="font-bold text-blue-900">Dental Filling</div>
+<div class="text-xs text-slate-500">Restorative Care</div>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">Dr. Sarah Miller</td>
+<td class="px-8 py-5 text-on-surface-variant">Mar 05, 2024</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-full text-xs font-bold">Completed</span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="p-2 hover:bg-slate-200 rounded-full transition-all">
+<span class="material-symbols-outlined text-slate-400" data-icon="download">download</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto border-t border-slate-200 mt-20">
+<div class="space-y-4 text-center md:text-left">
+<span class="text-lg font-bold text-blue-900 font-serif">Aether Dental Clinic</span>
+<p class="font-serif text-sm text-slate-500 max-w-md">© 2024 Aether Dental Clinic. Clinical Excellence &amp; Compassionate Care.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-serif text-sm text-slate-500 hover:text-teal-600 transition-colors" href="#">Privacy Policy</a>
+<a class="font-serif text-sm text-slate-500 hover:text-teal-600 transition-colors" href="#">Terms of Service</a>
+<a class="font-serif text-sm text-slate-500 hover:text-teal-600 transition-colors" href="#">Patient Rights</a>
+<a class="font-serif text-sm text-slate-500 hover:text-teal-600 transition-colors" href="#">Careers</a>
+</nav>
+</footer>
+</div>
+</body></html>

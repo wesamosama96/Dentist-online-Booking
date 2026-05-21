@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DentaCare Admin - Doctor Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#7f112d",
+                    "on-secondary-fixed-variant": "#005047",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#757682",
+                    "on-primary-fixed": "#00164e",
+                    "primary-fixed": "#dce1ff",
+                    "tertiary-fixed": "#ffdadc",
+                    "tertiary": "#5b001a",
+                    "surface-container-low": "#f2f4f6",
+                    "primary-container": "#1e3a8a",
+                    "background": "#f7f9fb",
+                    "surface-dim": "#d8dadc",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#00201c",
+                    "on-primary-fixed-variant": "#264191",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-surface": "#191c1e",
+                    "on-tertiary-container": "#ff8897",
+                    "inverse-surface": "#2d3133",
+                    "primary": "#00236f",
+                    "on-surface-variant": "#444651",
+                    "secondary-container": "#62fae3",
+                    "inverse-primary": "#b6c4ff",
+                    "surface-bright": "#f7f9fb",
+                    "surface-container": "#eceef0",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "secondary": "#006b5f",
+                    "on-primary-container": "#90a8ff",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-fixed": "#62fae3",
+                    "outline-variant": "#c5c5d3",
+                    "tertiary-fixed-dim": "#ffb2b9",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary-fixed-variant": "#891933",
+                    "on-secondary-container": "#007165",
+                    "surface": "#f7f9fb",
+                    "secondary-fixed-dim": "#3cddc7",
+                    "on-tertiary-fixed": "#400010",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#4059aa",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "md": "24px",
+                    "container-max": "1280px",
+                    "xl": "80px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "h2": ["Newsreader"],
+                    "body-md": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "h1": ["Newsreader"],
+                    "h3": ["Newsreader"],
+                    "caption": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["36px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "h3": ["28px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            border-left-width: 4px;
+        }
+        body {
+            background-color: #f7f9fb;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-white border-r border-slate-100 flex flex-col py-8 z-40 shadow-xl shadow-blue-900/5">
+<div class="px-8 mb-12">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+</div>
+<div>
+<h1 class="text-lg font-extrabold text-blue-900 tracking-tight font-h3 leading-none">Global Health Dental</h1>
+<p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Management Portal</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 bg-slate-50 text-blue-900 font-bold border-l-4 border-blue-900 rounded-r-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-bold text-label-bold">Overview</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-400 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-bold text-label-bold">Schedules</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-400 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-label-bold text-label-bold">Patient Records</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-400 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-bold text-label-bold">Clinic Analytics</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-400 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-bold text-label-bold">Billing</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-400 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-bold text-label-bold">Inventory</span>
+</a>
+</nav>
+<div class="px-4 mt-auto space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-slate-400 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-bold text-label-bold">Help Center</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-400 hover:text-blue-700 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-bold text-label-bold">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-72 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-30 bg-white/90 backdrop-blur-md flex items-center justify-between px-12 h-20 w-full border-b border-slate-200 shadow-[0_15px_30px_-5px_rgba(30,58,138,0.05)]">
+<div class="flex items-center gap-8">
+<h2 class="font-h2 text-h2 text-blue-900 tracking-tight">Dashboard</h2>
+<div class="hidden md:flex gap-6">
+<a class="text-blue-900 border-b-2 border-blue-900 pb-1 font-bold font-label-bold text-label-bold" href="#">Dashboard</a>
+<a class="text-slate-500 hover:text-blue-800 font-label-bold text-label-bold transition-all" href="#">Patients</a>
+<a class="text-slate-500 hover:text-blue-800 font-label-bold text-label-bold transition-all" href="#">Schedules</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="p-2 text-slate-400 hover:bg-slate-50/50 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-400 hover:bg-slate-50/50 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<button class="p-2 text-slate-400 hover:bg-slate-50/50 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="flex items-center gap-3 pl-6 border-l border-slate-200">
+<div class="text-right">
+<p class="font-label-bold text-label-bold text-blue-900">Dr. Julianne Vance</p>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Senior Orthodontist</p>
+</div>
+<img alt="Dr. Julianne Vance" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm" data-alt="professional portrait of a female doctor in a white clinical coat smiling warmly against a soft blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO6kZhsCxUEzAWONnUas8tp6b9zV9VVdbZnwn9KUv2j1uRL6qrG3yWhgb8y6LJPQ4DqSdTFrHAZJlQ0F57DBOiBXvn2RXD33WiqrzNL_xSWq4ivxTnmPrYonsU7CtEUIS40-f19zqTcxwv_pnFKXQ9N2kRbmEg1ybcg04tlW8di5Mp01FHBY_TacOzTrTjmGX5RePgIgdW5lCcyWu5aRl9jm3ZaKlE7E5nlD2SyuLwUf8zy8Bk_phD7l0KYgXBFl0h_yr92U7L8xU"/>
+</div>
+</div>
+</header>
+<!-- Content Body -->
+<div class="p-12 space-y-xl">
+<!-- Hero Stats & Next Patient -->
+<section class="grid grid-cols-12 gap-gutter">
+<!-- Next Patient Card -->
+<div class="col-span-12 lg:col-span-8 bg-white rounded-xl shadow-[0_30px_40px_-10px_rgba(30,58,138,0.05)] border border-blue-100/50 overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/3 bg-primary-container p-8 text-white flex flex-col justify-between">
+<div>
+<span class="px-3 py-1 bg-white/20 rounded-full text-[10px] font-bold tracking-widest uppercase mb-4 inline-block">Next Appointment</span>
+<h3 class="font-h3 text-h3 mb-1">Marcus Thorne</h3>
+<p class="text-blue-200 font-body-md text-body-md">Root Canal Therapy • Room 04</p>
+</div>
+<div class="mt-8 flex items-center gap-4">
+<div class="text-center bg-white/10 rounded-lg p-3 flex-1">
+<p class="text-[10px] uppercase font-bold opacity-60">Time</p>
+<p class="text-lg font-bold">10:30 AM</p>
+</div>
+<div class="text-center bg-white/10 rounded-lg p-3 flex-1">
+<p class="text-[10px] uppercase font-bold opacity-60">Duration</p>
+<p class="text-lg font-bold">45m</p>
+</div>
+</div>
+</div>
+<div class="flex-1 p-8 flex flex-col justify-between">
+<div>
+<h4 class="font-label-bold text-label-bold text-blue-900 mb-4 uppercase tracking-wider">Patient Notes</h4>
+<div class="space-y-4">
+<div class="flex items-start gap-3 p-4 bg-slate-50 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="history">history</span>
+<p class="text-body-md text-slate-600">History of dental anxiety. Prefers minimal chair tilt. Local anesthesia required.</p>
+</div>
+<div class="flex items-start gap-3 p-4 bg-slate-50 rounded-lg">
+<span class="material-symbols-outlined text-error" data-icon="error">error</span>
+<p class="text-body-md text-slate-600 font-semibold">Allergic to penicillin. Ensure chart is marked clearly.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="flex-1 py-3 px-6 bg-secondary-fixed text-on-secondary-container font-label-bold text-label-bold rounded-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+                                View Records
+                            </button>
+<button class="flex-1 py-3 px-6 bg-primary text-white font-label-bold text-label-bold rounded-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20">
+<span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+                                Start Session
+                            </button>
+</div>
+</div>
+</div>
+<!-- Quick Stats Column -->
+<div class="col-span-12 lg:col-span-4 grid grid-rows-2 gap-gutter">
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex items-center gap-6">
+<div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-blue-900">
+<span class="material-symbols-outlined text-3xl" data-icon="event_available">event_available</span>
+</div>
+<div>
+<p class="text-h2 font-h2 text-blue-900">14</p>
+<p class="text-slate-500 font-label-bold uppercase text-[10px] tracking-widest">Appointments Today</p>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex items-center gap-6">
+<div class="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center text-teal-700">
+<span class="material-symbols-outlined text-3xl" data-icon="hourglass_empty">hourglass_empty</span>
+</div>
+<div>
+<p class="text-h2 font-h2 text-teal-700">3</p>
+<p class="text-slate-500 font-label-bold uppercase text-[10px] tracking-widest">Pending Lab Reports</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Dashboard Grid -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Today's Timeline -->
+<section class="col-span-12 xl:col-span-7 space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="font-h3 text-h3 text-blue-900">Daily Schedule</h3>
+<div class="flex gap-2">
+<button class="p-2 border border-slate-200 rounded-lg hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<span class="px-4 py-2 bg-white rounded-lg font-label-bold text-label-bold border border-slate-200">Oct 24, 2023</span>
+<button class="p-2 border border-slate-200 rounded-lg hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8 space-y-8">
+<!-- Timeline Items -->
+<div class="relative pl-24">
+<div class="absolute left-[5.5rem] top-0 bottom-0 w-px bg-slate-100"></div>
+<!-- Appointment 1 -->
+<div class="relative mb-12">
+<div class="absolute -left-24 w-20 text-right pr-4 pt-1">
+<p class="text-label-bold font-label-bold text-blue-900">09:00</p>
+<p class="text-[10px] text-slate-400 font-bold">AM</p>
+</div>
+<div class="absolute -left-[3px] top-2 w-2 h-2 rounded-full bg-slate-300 ring-4 ring-white"></div>
+<div class="p-5 bg-slate-50/50 border-l-4 border-slate-200 rounded-r-lg group hover:border-blue-900 hover:bg-blue-50 transition-all">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-label-bold text-label-bold text-slate-800">Elena Rodriguez</h4>
+<p class="text-caption text-slate-500">General Consultation • Routine Checkup</p>
+</div>
+<span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-[10px] font-bold text-slate-400">COMPLETED</span>
+</div>
+</div>
+</div>
+<!-- Appointment 2 (Active/Now) -->
+<div class="relative mb-12">
+<div class="absolute -left-24 w-20 text-right pr-4 pt-1">
+<p class="text-label-bold font-label-bold text-blue-900">10:30</p>
+<p class="text-[10px] text-slate-400 font-bold">AM</p>
+</div>
+<div class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-blue-900 ring-4 ring-blue-100"></div>
+<div class="p-5 bg-blue-50 border-l-4 border-blue-900 rounded-r-lg">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-label-bold text-label-bold text-blue-900">Marcus Thorne</h4>
+<p class="text-caption text-blue-700/60 font-semibold">Root Canal Therapy • Emergency Visit</p>
+</div>
+<span class="px-3 py-1 bg-blue-900 text-white rounded-full text-[10px] font-bold animate-pulse">IN PROGRESS</span>
+</div>
+</div>
+</div>
+<!-- Appointment 3 -->
+<div class="relative mb-12">
+<div class="absolute -left-24 w-20 text-right pr-4 pt-1">
+<p class="text-label-bold font-label-bold text-blue-900">11:15</p>
+<p class="text-[10px] text-slate-400 font-bold">AM</p>
+</div>
+<div class="absolute -left-[3px] top-2 w-2 h-2 rounded-full bg-slate-300 ring-4 ring-white"></div>
+<div class="p-5 bg-white border-l-4 border-slate-100 rounded-r-lg group hover:border-blue-900 hover:bg-slate-50 transition-all border-y border-r">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-label-bold text-label-bold text-slate-800">Sarah Jenkins</h4>
+<p class="text-caption text-slate-500">Orthodontic Adjustment • Braces</p>
+</div>
+<span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-[10px] font-bold">CONFIRMED</span>
+</div>
+</div>
+</div>
+<!-- Appointment 4 -->
+<div class="relative">
+<div class="absolute -left-24 w-20 text-right pr-4 pt-1">
+<p class="text-label-bold font-label-bold text-blue-900">01:00</p>
+<p class="text-[10px] text-slate-400 font-bold">PM</p>
+</div>
+<div class="absolute -left-[3px] top-2 w-2 h-2 rounded-full bg-slate-300 ring-4 ring-white"></div>
+<div class="p-5 bg-white border-l-4 border-slate-100 rounded-r-lg group hover:border-blue-900 hover:bg-slate-50 transition-all border-y border-r">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-label-bold text-label-bold text-slate-800">James Wilson</h4>
+<p class="text-caption text-slate-500">Teeth Whitening • Aesthetic Session</p>
+</div>
+<span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-[10px] font-bold">CONFIRMED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming & Notifications -->
+<aside class="col-span-12 xl:col-span-5 space-y-lg">
+<!-- Weekly Glance -->
+<div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-h3 text-[22px] text-blue-900">Upcoming This Week</h3>
+<a class="text-primary font-label-bold text-caption hover:underline" href="#">See All</a>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-slate-100 rounded-lg flex flex-col items-center justify-center group-hover:bg-blue-900 group-hover:text-white transition-colors">
+<p class="text-[10px] font-bold uppercase">Wed</p>
+<p class="text-lg font-bold leading-none">25</p>
+</div>
+<div class="flex-1">
+<p class="font-label-bold text-label-bold text-slate-800">11 Appointments</p>
+<p class="text-caption text-slate-400">3 Surgeries, 8 Routine</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-blue-900" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-slate-100 rounded-lg flex flex-col items-center justify-center group-hover:bg-blue-900 group-hover:text-white transition-colors">
+<p class="text-[10px] font-bold uppercase">Thu</p>
+<p class="text-lg font-bold leading-none">26</p>
+</div>
+<div class="flex-1">
+<p class="font-label-bold text-label-bold text-slate-800">8 Appointments</p>
+<p class="text-caption text-slate-400">All Consultations</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-blue-900" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-slate-100 rounded-lg flex flex-col items-center justify-center group-hover:bg-blue-900 group-hover:text-white transition-colors">
+<p class="text-[10px] font-bold uppercase">Fri</p>
+<p class="text-lg font-bold leading-none">27</p>
+</div>
+<div class="flex-1">
+<p class="font-label-bold text-label-bold text-slate-800">14 Appointments</p>
+<p class="text-caption text-slate-400">Full Day • High Volume</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-blue-900" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Messages Bento Card -->
+<div class="bg-blue-900 rounded-xl p-8 text-white relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-h3 text-[22px] mb-4">Patient Messages</h3>
+<div class="space-y-4">
+<div class="p-4 bg-white/10 rounded-lg border border-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<p class="font-label-bold text-label-bold">David Miller</p>
+<span class="w-2 h-2 bg-secondary-fixed rounded-full"></span>
+</div>
+<p class="text-caption text-blue-100 line-clamp-1">"The swelling has gone down significantly since..."</p>
+</div>
+<div class="p-4 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<p class="font-label-bold text-label-bold">Emily Watson</p>
+</div>
+<p class="text-caption text-blue-100 line-clamp-1">"Just wanted to confirm my appointment for..."</p>
+</div>
+</div>
+<button class="mt-6 w-full py-2 bg-white text-blue-900 font-label-bold text-caption rounded-lg hover:bg-blue-50 transition-colors">
+                                Open Inbox
+                            </button>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-blue-800 rounded-full blur-3xl opacity-50"></div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-12 right-12 w-16 h-16 bg-primary-container text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-50">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>
