@@ -1,0 +1,79 @@
+.card {
+  background-color: #1a2e6e;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  align-self: flex-start;
+  margin-top: -10px;
+}
+
+.circleWrapper {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.svg {
+  width: 130px;
+  height: 130px;
+  transform: rotate(-90deg);
+}
+
+.trackCircle {
+  stroke: rgba(255, 255, 255, 0.15);
+}
+
+.progressCircle {
+  stroke: #4dd9c0;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.percentage {
+  position: absolute;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.updateButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  color: #1a2e6e;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.updateButton:hover {
+  background-color: #f0f0f0;
+}

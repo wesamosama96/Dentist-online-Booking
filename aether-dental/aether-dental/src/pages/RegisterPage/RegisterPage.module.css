@@ -1,0 +1,104 @@
+/* Two columns side by side */
+.page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a2e6e;
+  margin: 0 0 8px 0;
+}
+
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+
+.twoColumnRow {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+
+.twoColumnRow > * {
+  flex: 1;
+}
+
+
+.fieldSpacing {
+  margin-bottom: 16px;
+}
+
+
+.registerButton {
+  width: 100%;
+  padding: 14px;
+  background-color: #8b1a2e;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 4px;
+}
+
+.registerButton:hover {
+  background-color: #6f1424;
+}
+
+
+.divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 20px 0 16px 0;
+}
+
+
+.signInText {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin: 0;
+}
+
+
+.signInLink {
+  color: #1a2e6e;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signInLink:hover {
+  text-decoration: underline;
+}

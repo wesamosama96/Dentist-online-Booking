@@ -1,0 +1,97 @@
+.sidebar {
+  width: 200px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 20px;
+  flex-shrink: 0;
+}
+
+.top {
+  margin-bottom: 32px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2e6e;
+  margin-bottom: 16px;
+}
+
+.welcomeTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 2px;
+}
+
+.welcomeSub {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navLink:hover {
+  background-color: #f3f4f6;
+  color: #1a2e6e;
+}
+
+.active {
+  background-color: #1a2e6e;
+  color: #ffffff;
+}
+
+.active:hover {
+  background-color: #1a2e6e;
+  color: #ffffff;
+}
+
+.navIcon {
+  font-size: 16px;
+}
+
+.bottom {
+  margin-top: auto;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.support {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #1a6e5e;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.support:hover {
+  background-color: #f0faf8;
+}
