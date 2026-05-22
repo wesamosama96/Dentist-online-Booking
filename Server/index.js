@@ -3,6 +3,8 @@
     const dotenv = require("dotenv");
     const authRoutes = require("./Routes/authRoutes");
     const contactRoutes = require("./Routes/contact.Routes");
+    const galleryRoutes = require("./Routes/gallery.Routes");
+    const path = require("path");
     const cors = require("cors");
     const db = require("./config/db");
 
@@ -23,6 +25,8 @@
 
     app.use("/auth", authRoutes);
     app.use("/contact", contactRoutes);
+    app.use("/gallery", galleryRoutes);
+    app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
     app.use((err, req, res, next) => {
     console.error(err.stack);

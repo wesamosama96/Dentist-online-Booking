@@ -1,0 +1,120 @@
+.gallerySection {
+  padding: 100px 0;
+  background: #f5f5f5;
+}
+
+.galleryHeader {
+  margin-bottom: 50px;
+}
+
+.galleryHeader h2 {
+  font-size: 48px;
+  color: #00236f;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.galleryHeader p {
+  color: #666;
+  max-width: 650px;
+  line-height: 1.8;
+}
+
+/* masonry layout */
+
+.galleryGrid {
+  column-count: 3;
+  column-gap: 24px;
+}
+
+.galleryCard {
+  break-inside: avoid;
+
+  margin-bottom: 24px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: white;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.galleryCard img {
+  width: 100%;
+  display: block;
+
+  border-radius: 18px;
+
+  transition: 0.4s;
+}
+
+.galleryCard:hover img {
+  transform: scale(1.04);
+}
+
+/* custom heights */
+
+.largeCard img {
+  height: 520px;
+  object-fit: cover;
+}
+
+.mediumCard img {
+  height: 320px;
+  object-fit: cover;
+}
+
+.smallCard img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.tallCard img {
+  height: 430px;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .galleryGrid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .galleryGrid {
+    column-count: 1;
+  }
+
+  .galleryHeader h2 {
+    font-size: 36px;
+  }
+}
+/* GalleryBottom styles */
+.statsWrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.statsBox {
+  background: #eef0f3;
+  padding: 30px 10px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.statItem h2 {
+  color: #0b2e8a;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+.statItem p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  letter-spacing: 1px;
+  margin: 0;
+}

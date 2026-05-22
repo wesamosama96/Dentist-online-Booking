@@ -4,6 +4,7 @@ import MainLayout from './Layouts/MainLayout'
 import LandingPage from './Pages/LandingPage/LandingPage'
 import Contact from './Pages/contact/Contact'
 import Services from './Pages/Services/Services'
+import Gallery from './Pages/gallery/Gallery'
 
 function App() {
 
@@ -14,8 +15,7 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
-
-
+          <Route path="/gallery" element={<Gallery />} />
         </Route>
 
       </Routes>
