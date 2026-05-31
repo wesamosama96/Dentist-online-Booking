@@ -1,0 +1,80 @@
+.clinical {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.clinical h2 {
+    color: #00236F;
+    margin-bottom: 5px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.clinical p {
+    color: #6B7280;
+    font-size: 15px;
+}
+
+.cardsWrapper {
+    gap: 20px;
+}
+
+.Visit,
+.XRay,
+.Health {
+    background-color: white;
+    width: 100%;
+    max-width: 260px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* TITLES */
+.Visit h1,
+.XRay h1,
+.Health h1 {
+    color: #6B7280;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* NUMBERS / MAIN TEXT */
+.Visit span,
+.XRay span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00236F;
+}
+
+/* TEXT */
+.Visit p,
+.XRay p {
+    color: #6B7280;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* HEALTH CARD */
+.Health {
+    background: linear-gradient(135deg, #1E3A8A, #2563EB);
+    color: white;
+}
+
+.Health p {
+    color: #E5E7EB;
+    font-size: 13px;
+}
+
+.Health span {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}

@@ -96,7 +96,7 @@
 .history_card_wrapper {
     background-color: white;
     border-radius: 16px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05); /* شادو ناعم جداً */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05); 
     overflow: hidden;
     margin-top: 15px;
     border: 1px solid #f1f3f5;

@@ -1,9 +1,6 @@
-const Records = () => {
+import Records from "../../components/Dashboard/Records/Records" 
+export default function RecordsPage() {
   return (
-    <div>
-      <h1>Records Page</h1>
-    </div>
-  );
-};
-
-export default Records;
+    <Records/>
+  )
+}
