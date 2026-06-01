@@ -2,18 +2,17 @@
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-    /* تأكد إن الـ Appointment مش واخد margin-bottom ضخم */
 }
 
 .Aether {
     color: #00236F;
     display: flex;
     justify-content: space-between;
-    align-items: center;       /* لتوسط العناصر عمودياً على نفس السطر */
-    margin-top: auto;          /* سحر الـ Flexbox: بيزق الـ Footer لتحت خالص تلقائياً */
-    padding: 30px 40px;        /* مساحة داخلية مريحة للعين بدلاً من المارجن الضخم */
-    background-color: #ffffff; /* لإعطائه خلفية بيضاء نظيفة كباقي لوحة التحكم */
-    border-top: 1px solid #f4f6f8; /* خط علوي ناعم يفصله عن المحتوى */
+    align-items: center;       
+    margin-top: auto;          
+    padding: 30px 40px;       
+    background-color: #ffffff; 
+    border-top: 1px solid #f4f6f8; 
     width: 100%;
 }
 
@@ -21,12 +20,11 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    margin: 0;                 /* شيلنا الـ margin-top: 30px عشان اللينكات تبقى على نفس خط اسم العيادة */
+    margin: 0;                 
     padding: 0;
-    list-style: none;          /* لإزالة النقط الخاصة بالقائمة */
+    list-style: none;         
 }
 
-/* لمسة جمالية سريعة للينكات */
 .Aether_text ul li {
     font-size: 14px;
     font-weight: 500;
@@ -35,5 +33,5 @@
 }
 
 .Aether_text ul li:hover {
-    color: #001749;            /* تغميق اللون بسيط عند التمرير بالماوس */
+    color: #001749;          
 }
