@@ -6,7 +6,7 @@ export default function RecordCard({ title, subtitle, icon }) {
     <div className={`${styles.card} p-3 mb-3 d-flex flex-row align-items-center justify-content-between`}>
       
       <div className="d-flex align-items-center gap-3">
-        <IconBox icon={icon} link="" /> {/* سيبنا مكان اللينك فاضي زي ما طلبت */}
+        <IconBox icon={icon} link="" /> 
         <div>
           <h6 className={`${styles.recordTitle} mb-1`}>{title}</h6>
           <small className="text-muted">{subtitle}</small>

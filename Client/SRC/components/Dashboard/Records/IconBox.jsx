@@ -14,7 +14,6 @@ export default function IconBox({ icon, link }) {
           <FontAwesomeIcon icon={icon} style={{ fontSize: "20px" }} />
         )
       ) : (
-        /* مكان محجوز للصورة لو الـ src لسه فاضي */
         <div style={{ width: "24px", height: "24px", backgroundColor: "#e2e8f0" }}>
             <img src={Icon5} alt="icon" />
         </div>
